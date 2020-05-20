@@ -30,23 +30,13 @@ namespace AuthDataLayer.Repositories
             await context.SaveChangesAsync();
         }
 
-        public async Task AddGroupConnect(GroupConnectModel groupConnectModel)
-        {
-            lock (locker)
-            {
-                context.GroupsConnectRecords.Add(groupConnectModel);
-            }
-            await context.SaveChangesAsync();
-        }
+      
 
         public async Task<GroupModel> GetGroupById(Guid id)
         {
            return await context.Groups.FindAsync(id);
         }
 
-        public Task<GroupConnectModel[]> GetGroupConnectByGroupId(Guid id)
-        {
-            return Task.FromResult(context.GroupsConnectRecords.Where(x => x.GroupId == id).ToArray());
-        }
+        
     }
 }

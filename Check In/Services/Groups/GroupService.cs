@@ -22,14 +22,10 @@ namespace Check_In.Services.Groups
             return await groupsRepository.GetGroups();
         }
 
-        public async Task<GroupViewModel> GetGroupConnectsByGroupId(Guid id)
+        public async Task<GroupModel> GetGroup(Guid id)
         {
-          var connects = await groupsRepository.GetGroupConnectByGroupId(id);
-            return new GroupViewModel
-            {
-                GroupId = id,
-                Users = connects.Select(x => x.UserLogin).ToArray()
-            };
+          return await groupsRepository.GetGroupById(id);
+            
         }
     }
 }

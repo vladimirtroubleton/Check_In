@@ -10,7 +10,6 @@ namespace AuthDataLayer
     {
         public DbSet<UserModel> Users { get; set; }
         public DbSet<GroupModel> Groups { get; set; }
-        public DbSet<GroupConnectModel> GroupsConnectRecords { get; set; }
         public UserContext(DbContextOptions<UserContext> options):base(options)
         {
             Database.EnsureCreated();
