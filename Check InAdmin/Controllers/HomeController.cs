@@ -7,16 +7,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Check_InAdmin.Models;
 using AuthDataLayer.Models;
+using AuthDataLayer.Repositories;
 
 namespace Check_InAdmin.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private IGroupsRepository groupsRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IGroupsRepository groupsRepository)
         {
             _logger = logger;
+            this.groupsRepository = groupsRepository;
         }
 
         public IActionResult Index()
@@ -31,9 +34,10 @@ namespace Check_InAdmin.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddGroup(GroupModel groupModel)
+        public async Task<IActionResult> AddGroup(GroupModel groupModel)
         {
-            return View();
+            await groupsRepository.AddGroup(groupModel);
+            return RedirectToAction("Index");
         }
     }
 }

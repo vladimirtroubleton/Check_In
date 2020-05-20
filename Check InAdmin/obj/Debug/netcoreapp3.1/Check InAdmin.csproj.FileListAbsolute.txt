@@ -125,6 +125,23 @@ D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnaly
 D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddGroup.cshtml.g.cs
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.csproj.CoreCompileInputs.cache
 D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.MvcApplicationPartsAssemblyInfo.cache
-D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddGroup.cshtml.g.cs
