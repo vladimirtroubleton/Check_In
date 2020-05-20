@@ -1,0 +1,26 @@
+﻿@page "/"
+@inject Check_In.Services.IAuthService authServ
+@inject AuthenticationStateProvider authProvider
+@inject NavigationManager uriHelper
+@inject Check_In.Services.users.UserService userServ
+@using AuthDataLayer.Models
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <a href="/AddPoll">Добавить опрос</a>
+        </div>
+    </div>
+</div>
+
+@code{
+    UserModel currentUser;
+    protected override async Task OnInitializedAsync()
+    {
+
+        var authState = await authProvider.GetAuthenticationStateAsync();
+        currentUser = await userServ.GetCurrentUser(authState.User.Identity.Name);
+        if (currentUser == null) { uriHelper.NavigateTo("/loginControl"); }
+
+    }
+}

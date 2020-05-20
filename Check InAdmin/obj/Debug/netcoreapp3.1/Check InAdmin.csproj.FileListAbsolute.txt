@@ -1,0 +1,56 @@
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Check InAdmin.exe
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Check InAdmin.deps.json
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Check InAdmin.runtimeconfig.json
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Check InAdmin.runtimeconfig.dev.json
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Check InAdmin.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Check InAdmin.pdb
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Check InAdmin.Views.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Check InAdmin.Views.pdb
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\AuthDataLayer.dll
+D:\Develop\OPROSNIK\Check InAdmin\bin\Debug\netcoreapp3.1\AuthDataLayer.pdb
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.csprojAssemblyReference.cache
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.csproj.CoreCompileInputs.cache
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.MvcApplicationPartsAssemblyInfo.cache
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.RazorAssemblyInfo.cache
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.RazorAssemblyInfo.cs
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.AssemblyInfoInputs.cache
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.AssemblyInfo.cs
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.TagHelpers.input.cache
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.TagHelpers.output.cache
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.RazorCoreGenerate.cache
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.RazorTargetAssemblyInfo.cache
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.RazorTargetAssemblyInfo.cs
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.Views.pdb
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.csproj.CopyComplete
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\staticwebassets\Check InAdmin.StaticWebAssets.Manifest.cache
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\staticwebassets\Check InAdmin.StaticWebAssets.xml
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.dll
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.pdb
+D:\Develop\OPROSNIK\Check InAdmin\obj\Debug\netcoreapp3.1\Check InAdmin.genruntimeconfig.cache
