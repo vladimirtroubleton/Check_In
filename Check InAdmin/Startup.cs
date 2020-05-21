@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using AuthDataLayer;
 using AuthDataLayer.Repositories;
+using AuthDataLayer.Utils;
+using Check_InAdmin.ModelBuilders;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +14,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using QuestionDataLayer;
+using QuestionDataLayer.ModelBuilders;
+using QuestionDataLayer.Repository;
 
 namespace Check_InAdmin
 {
@@ -28,12 +34,25 @@ namespace Check_InAdmin
         {
             services.AddControllersWithViews();
             services.AddDbContext<UserContext>(options =>
-              options.UseSqlServer(Configuration.GetConnectionString("DbConnectionString")));
+              options.UseSqlServer(Configuration.GetConnectionString("DbConnectionString")));       
+            services.AddDbContext<QuestionsContext>(options =>
+              options.UseSqlServer(Configuration.GetConnectionString("QuestionContext")));
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                          .AddCookie(options =>
+                          {
+                              options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Admin/Login");
+                              options.AccessDeniedPath = new Microsoft.AspNetCore.Http.PathString("/Admin/Login");
 
+                          });
 
 
             services.AddScoped<IUsersRepository, UsersRepository>();
             services.AddScoped<IGroupsRepository, GroupsRepository>();
+            services.AddScoped<ILoginUtil, LoginUtil>();
+            services.AddScoped<IPasswordHash, PasswordHash>();
+            services.AddScoped<IDataInViewModelBuilder, DataInViewModelBuilder>();
+            services.AddScoped<IQuestinosRepository, QuestinosRepository>();
+            services.AddScoped<IQuestionModelBuilder, QuestionModelBuilder>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,14 +73,17 @@ namespace Check_InAdmin
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}");
             });
+
+           
         }
     }
 }

@@ -19,6 +19,26 @@ namespace AuthDataLayer.Utils
             this.passwordHash = passwordHash;
         }
 
+        public async Task<UserModel> CheckAdminParam(LoginViewModel loginModel)
+        {
+            var loggingUser = await usersRepository.GetUserByLogin(loginModel.Login);
+            if (loggingUser != null) 
+            { 
+                if(loggingUser.Password == loginModel.Password)
+                {
+                    return loggingUser;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public async  Task<UserModel> CheckUserDataByLoginViewModel(LoginViewModel loginModel)
         {
             var loggingUser = await usersRepository.GetUserByLogin(loginModel.Login);

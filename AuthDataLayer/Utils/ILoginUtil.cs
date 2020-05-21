@@ -7,5 +7,7 @@ namespace AuthDataLayer.Utils
     public interface ILoginUtil
     {
         Task<UserModel> CheckUserDataByLoginViewModel(LoginViewModel loginModel);
+
+        Task<UserModel> CheckAdminParam(LoginViewModel loginModel);
     }
 }

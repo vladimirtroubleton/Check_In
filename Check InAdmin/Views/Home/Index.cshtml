@@ -1,8 +1,64 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model Check_InAdmin.Models.AllDataInViewModel
+
+@{
+    ViewData["Title"] = "Index";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        <div class="row">
+            <div class="col-4 text-center">
+                <h4>Опросы</h4>
+            </div>
+            <div class="col-4 text-center">
+                <h4>Пользователи</h4>
+            </div>
+            
+            <div class="col-4 text-center">
+                <h4>Группы</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 mx-auto">
+                
+                    @foreach (var item in Model.Questions)
+                    {
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    @item.Name
+                                </div>
+                                <a href="/Home/GetQuestion?id=@item.Id" class="btn btn-outline-info">Перейти</a>
+                            </div>
+                        </div>
+                    }
+                
+            </div>
+            <div class="col-4 mx-auto">
+
+
+                @foreach (var item in Model.Users)
+                {
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">
+                                @item.Name @item.Surname
+                            </div>
+                            <a href="#" class="btn btn-outline-info">Перейти</a>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-4 mx-auto">
+                @foreach (var item in Model.Groups)
+                {
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">
+                                @item.Name
+                            </div>
+                            <a href="/Home/DeleteGroup?id=@item.Id" class="btn btn-outline-danger">Удалить</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+

@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Develop\\OPROSNIK\\Check In\\Check In.csproj": {}
+    "D:\\Projects\\OPROSNIK\\Check_In\\Check In\\Check In.csproj": {}
   },
   "projects": {
-    "D:\\Develop\\OPROSNIK\\AuthDataLayer\\AuthDataLayer.csproj": {
+    "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Develop\\OPROSNIK\\AuthDataLayer\\AuthDataLayer.csproj",
+        "projectUniqueName": "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj",
         "projectName": "AuthDataLayer",
-        "projectPath": "D:\\Develop\\OPROSNIK\\AuthDataLayer\\AuthDataLayer.csproj",
-        "packagesPath": "C:\\Users\\vladimirtroubleton\\.nuget\\packages\\",
-        "outputPath": "D:\\Develop\\OPROSNIK\\AuthDataLayer\\obj\\",
+        "projectPath": "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj",
+        "packagesPath": "C:\\Users\\it013\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vladimirtroubleton\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\it013\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -67,22 +71,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Develop\\OPROSNIK\\Check In\\Check In.csproj": {
+    "D:\\Projects\\OPROSNIK\\Check_In\\Check In\\Check In.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Develop\\OPROSNIK\\Check In\\Check In.csproj",
+        "projectUniqueName": "D:\\Projects\\OPROSNIK\\Check_In\\Check In\\Check In.csproj",
         "projectName": "Check In",
-        "projectPath": "D:\\Develop\\OPROSNIK\\Check In\\Check In.csproj",
-        "packagesPath": "C:\\Users\\vladimirtroubleton\\.nuget\\packages\\",
-        "outputPath": "D:\\Develop\\OPROSNIK\\Check In\\obj\\",
+        "projectPath": "D:\\Projects\\OPROSNIK\\Check_In\\Check In\\Check In.csproj",
+        "packagesPath": "C:\\Users\\it013\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\OPROSNIK\\Check_In\\Check In\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\vladimirtroubleton\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\it013\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -94,8 +102,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Develop\\OPROSNIK\\AuthDataLayer\\AuthDataLayer.csproj": {
-                "projectPath": "D:\\Develop\\OPROSNIK\\AuthDataLayer\\AuthDataLayer.csproj"
+              "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj": {
+                "projectPath": "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj"
               }
             }
           }
@@ -152,7 +160,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

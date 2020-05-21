@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AuthDataLayer\AuthDataLayer.csproj" />
+    <ProjectReference Include="..\QuestionDataLayer\QuestionDataLayer.csproj" />
   </ItemGroup>
 
 

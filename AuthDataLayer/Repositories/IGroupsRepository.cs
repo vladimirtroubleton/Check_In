@@ -11,5 +11,7 @@ namespace AuthDataLayer.Repositories
         Task AddGroup(GroupModel groupModel);
  
         Task<GroupModel[]> GetGroups();
+
+        Task DeleteGroup(Guid Id);
     }
 }

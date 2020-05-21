@@ -1,0 +1,64 @@
+﻿@model QuestionDataLayer.Models.QuestionModel
+
+@{
+    ViewData["Title"] = "AddQuestion";
+}
+
+
+<div class="row mx-auto">
+    <div class="col-4">
+        <form asp-action="AddQuestion">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+          
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuestionName" class="control-label"></label>
+                <input asp-for="QuestionName" class="form-control" />
+                <span asp-validation-for="QuestionName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuestionName1" class="control-label"></label>
+                <input asp-for="QuestionName1" class="form-control" />
+                <span asp-validation-for="QuestionName1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuestionName2" class="control-label"></label>
+                <input asp-for="QuestionName2" class="form-control" />
+                <span asp-validation-for="QuestionName2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuestionName3" class="control-label"></label>
+                <input asp-for="QuestionName3" class="form-control" />
+                <span asp-validation-for="QuestionName3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuestionName4" class="control-label"></label>
+                <input asp-for="QuestionName4" class="form-control" />
+                <span asp-validation-for="QuestionName4" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="GroupId" class="control-label"></label>
+                <select asp-for="GroupId" class="form-control">
+                    @foreach (var item in ViewBag.Groups)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="GroupId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Опубликовать" class="btn btn-outline-info" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

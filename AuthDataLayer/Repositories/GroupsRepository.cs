@@ -37,6 +37,14 @@ namespace AuthDataLayer.Repositories
            return await context.Groups.FindAsync(id);
         }
 
-        
+        public async Task DeleteGroup(Guid id)
+        {
+           var group =await  GetGroupById(id);
+            lock (locker)
+            {
+                context.Groups.Remove(group);
+            }
+            await context.SaveChangesAsync();
+        }
     }
 }

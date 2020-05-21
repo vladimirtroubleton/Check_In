@@ -50,3 +50,11 @@ D:\Develop\OPROSNIK\AuthDataLayer\obj\Debug\netstandard2.0\AuthDataLayer.Assembl
 D:\Develop\OPROSNIK\AuthDataLayer\obj\Debug\netstandard2.0\AuthDataLayer.AssemblyInfo.cs
 D:\Develop\OPROSNIK\AuthDataLayer\obj\Debug\netstandard2.0\AuthDataLayer.dll
 D:\Develop\OPROSNIK\AuthDataLayer\obj\Debug\netstandard2.0\AuthDataLayer.pdb
+D:\Projects\OPROSNIK\Check_In\AuthDataLayer\bin\Debug\netstandard2.0\AuthDataLayer.deps.json
+D:\Projects\OPROSNIK\Check_In\AuthDataLayer\bin\Debug\netstandard2.0\AuthDataLayer.dll
+D:\Projects\OPROSNIK\Check_In\AuthDataLayer\bin\Debug\netstandard2.0\AuthDataLayer.pdb
+D:\Projects\OPROSNIK\Check_In\AuthDataLayer\obj\Debug\netstandard2.0\AuthDataLayer.csprojAssemblyReference.cache
+D:\Projects\OPROSNIK\Check_In\AuthDataLayer\obj\Debug\netstandard2.0\AuthDataLayer.AssemblyInfoInputs.cache
+D:\Projects\OPROSNIK\Check_In\AuthDataLayer\obj\Debug\netstandard2.0\AuthDataLayer.AssemblyInfo.cs
+D:\Projects\OPROSNIK\Check_In\AuthDataLayer\obj\Debug\netstandard2.0\AuthDataLayer.dll
+D:\Projects\OPROSNIK\Check_In\AuthDataLayer\obj\Debug\netstandard2.0\AuthDataLayer.pdb

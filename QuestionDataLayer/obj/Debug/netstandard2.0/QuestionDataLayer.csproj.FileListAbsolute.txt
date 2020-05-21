@@ -1,0 +1,8 @@
+D:\Projects\OPROSNIK\Check_In\QuestionDataLayer\bin\Debug\netstandard2.0\QuestionDataLayer.deps.json
+D:\Projects\OPROSNIK\Check_In\QuestionDataLayer\bin\Debug\netstandard2.0\QuestionDataLayer.dll
+D:\Projects\OPROSNIK\Check_In\QuestionDataLayer\obj\Debug\netstandard2.0\QuestionDataLayer.AssemblyInfoInputs.cache
+D:\Projects\OPROSNIK\Check_In\QuestionDataLayer\obj\Debug\netstandard2.0\QuestionDataLayer.AssemblyInfo.cs
+D:\Projects\OPROSNIK\Check_In\QuestionDataLayer\bin\Debug\netstandard2.0\QuestionDataLayer.pdb
+D:\Projects\OPROSNIK\Check_In\QuestionDataLayer\obj\Debug\netstandard2.0\QuestionDataLayer.csprojAssemblyReference.cache
+D:\Projects\OPROSNIK\Check_In\QuestionDataLayer\obj\Debug\netstandard2.0\QuestionDataLayer.dll
+D:\Projects\OPROSNIK\Check_In\QuestionDataLayer\obj\Debug\netstandard2.0\QuestionDataLayer.pdb

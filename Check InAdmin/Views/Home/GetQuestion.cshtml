@@ -1,0 +1,22 @@
+﻿@model QuestionDataLayer.ViewModels.QuestionViewModel
+
+@{
+    ViewData["Title"] = "GetQuestion";
+}
+    <div class="container mx-auto">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-title">Название опроса</p>
+                    <h4> @Model.QuestionName</h4>
+                    <p class="card-text">Название группы</p>
+                    <p class="card-title">@Model.GroupName</p>
+                    <p>Вопросы:</p>
+                    @foreach (var item in Model.Questions)
+                    {
+                        <p class="card-title">@item</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
