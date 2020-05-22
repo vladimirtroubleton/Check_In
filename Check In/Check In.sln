@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthDataLayer", "..\AuthDat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Check InAdmin", "..\Check InAdmin\Check InAdmin.csproj", "{A648D2F3-92AE-4FC1-B526-0EFC6A690A26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionDataLayer", "..\QuestionDataLayer\QuestionDataLayer.csproj", "{D7E04A27-65D0-462E-A83C-21B44D0B4EB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuestionDataLayer", "..\QuestionDataLayer\QuestionDataLayer.csproj", "{D7E04A27-65D0-462E-A83C-21B44D0B4EB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

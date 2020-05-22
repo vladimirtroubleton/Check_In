@@ -17,7 +17,8 @@ namespace AuthDataLayer.ModelBuilders
                 Email = viewModel.Email,
                 Password = viewModel.Password,
                 Name = viewModel.Name,
-                Surname = viewModel.Surname
+                Surname = viewModel.Surname,
+                GroupId = viewModel.GroupId
 
             };
         }

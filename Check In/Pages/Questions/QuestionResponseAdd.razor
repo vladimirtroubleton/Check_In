@@ -1,0 +1,140 @@
+﻿@page "/questionResponseAdd/{Id:int}"
+@using AuthDataLayer.Models
+@using QuestionDataLayer.ViewModels
+@using QuestionDataLayer.Models
+@inject AuthenticationStateProvider authProvider
+@inject NavigationManager uriHelper
+@inject Check_In.Services.users.UserService userServ
+@inject Check_In.Services.Question.QuestionService questServ
+<AuthorizeView>
+    <Authorized>
+        <div class="container">
+            @if (question != null)
+            {
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">Название опроса</div>
+                                <div class="card-title"><h4>@question.QuestionName</h4></div>
+                                <div class="card-title">Группа</div>
+                                <div class="card-title">@question.GroupName</div>
+                                <div class="card-title">Вопросы:</div>
+                                @for(int i = 0; i < questCount; i++)
+                                {
+                                    <p class="card-title">Вопрос № @i</p>
+                                    <div class="card-text">@question.Questions[i]</div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <EditForm Model="@questionForForm" OnValidSubmit="ActivateTextBox" Context="addQ">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary Model="@questionForForm" />
+                    <div class="row">
+                        <div class="col-12 mx-auto">
+                            <div class="form-group" style="@questStyle">
+                                <p>Вопрос №0</p>
+                                <InputText @bind-Value="questionForForm.Question" class="form-control"></InputText>
+                            </div>
+                            <div class="form-group" style="@questStyle1">
+                                <InputText @bind-Value="questionForForm.Question1"></InputText>
+                            </div>
+                            <div class="form-group" style="@questStyle2">
+                                <InputText @bind-Value="questionForForm.Question2"></InputText>
+                            </div>
+                            <div class="form-group" style="@questStyle3">
+                                <InputText @bind-Value="questionForForm.Question3"></InputText>
+                            </div>
+                            <div class="form-group" style="@questStyle4">
+                                <InputText @bind-Value="questionForForm.Question4"></InputText>
+                            </div>
+
+                        </div>
+                    </div>
+                </EditForm>
+            }
+            else
+            {
+                <h4>Загрузка.....</h4>
+            }
+        </div>
+
+    </Authorized>
+</AuthorizeView>
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    UserModel currentUser;
+
+    QuestionViewModel question;
+
+
+
+    QuestionModel questionForForm = new QuestionModel();
+
+    string questStyle = "display:none";
+    string questStyle1= "display:none";
+    string questStyle2= "display:none";
+    string questStyle3= "display:none";
+    string questStyle4= "display:none";
+
+    int questCount;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await authProvider.GetAuthenticationStateAsync();
+        currentUser = await userServ.GetCurrentUser(authState.User.Identity.Name);
+        question = await questServ.GetQuestionsById(Id);
+        questCount = question.Questions.Count();
+        await ActivateTextBox();
+    }
+
+    private Task ActivateTextBox()
+    {
+        switch (questCount)
+        {
+            case 1:
+                {
+                    questStyle =  "display:block";
+                    break;
+                }
+                case 2:
+                {
+                    questStyle = "";
+                    questStyle1 = "";
+                    break;
+                }
+                case 3:
+                {
+                    questStyle = "";
+                    questStyle1 = "";
+                    questStyle2 = "";
+                    break;
+                }
+                case 4:
+                {
+                    questStyle = "";
+                    questStyle1 = "";
+                    questStyle2 = "";
+                    questStyle3 = "";
+                    break;
+                }
+                case 5:
+                {
+                    questStyle = "";
+                    questStyle1 = "";
+                    questStyle2 = "";
+                    questStyle3 = "";
+                    questStyle4 = "";
+                    break;
+                }
+        }
+        return Task.CompletedTask;
+    }
+}

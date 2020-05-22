@@ -12,6 +12,7 @@ using AuthDataLayer.Utils;
 using Blazored.LocalStorage;
 using Check_In.Services;
 using Check_In.Services.Groups;
+using Check_In.Services.Question;
 using Check_In.Services.users;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -26,6 +27,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using QuestionDataLayer;
+using QuestionDataLayer.ModelBuilders;
+using QuestionDataLayer.Repository;
 
 namespace Check_In
 {
@@ -47,7 +51,9 @@ namespace Check_In
             services.AddServerSideBlazor();
 
             services.AddDbContext<UserContext>(options =>
-               options.UseSqlServer(Configuration.GetConnectionString("DbConnectionString")));
+               options.UseSqlServer(Configuration.GetConnectionString("DbConnectionString")));  
+            services.AddDbContext<QuestionsContext>(options =>
+               options.UseSqlServer(Configuration.GetConnectionString("QuestionContext")));
 
             services.AddAuthorizationCore(config =>
             {
@@ -82,9 +88,12 @@ namespace Check_In
             services.AddScoped<ILoginUtil, LoginUtil>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IGroupsRepository, GroupsRepository>();
+            services.AddScoped<IQuestinosRepository, QuestinosRepository>();
+            services.AddScoped<IQuestionModelBuilder, QuestionModelBuilder>();
             services.AddScoped<UserService>();
 
             services.AddScoped<GroupService>();
+            services.AddScoped<QuestionService>();
 
             services.AddHttpClient();
             services.AddScoped<HttpClient>();

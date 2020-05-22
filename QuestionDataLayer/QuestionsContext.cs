@@ -21,7 +21,7 @@ namespace QuestionDataLayer
                 Id= 1,
                 GroupId = Guid.Parse("3777d175-038c-4757-92e8-0c7e1fd677d5"),
                 Name = "Опрос о качестве приложения",
-                QuestionName = "Вам нравится приложение?"
+                Question = "Вам нравится приложение?"
 
             };
             modelBuilder.Entity<QuestionModel>().HasData(new QuestionModel[] { questionModel });

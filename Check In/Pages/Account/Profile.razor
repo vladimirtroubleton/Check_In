@@ -4,12 +4,13 @@
 @inject AuthenticationStateProvider authProvider
 @inject NavigationManager uriHelper
 @inject Check_In.Services.users.UserService userServ
+@inject Check_In.Services.Groups.GroupService groupServ
 <AuthorizeView>
     <Authorized>
 
 
 
-        @if (currentUser == null)
+        @if (currentUser == null || group == null)
         {
             <h4>Загружаю ...</h4>
         }
@@ -49,6 +50,12 @@
                                 <h4 class="card-title text-center">
                                     @currentUser.Email
                                 </h4>
+                                <p class="card-title text-center">
+                                    Название группы:
+                                </p>
+                                <h4 class="card-title text-center">
+                                    @group.Name
+                                </h4>
                                 <button @onclick="LogOut" class="mx-auto btn btn-outline-danger">Выйти</button>
                             </div>
 
@@ -65,6 +72,8 @@
 @code {
     private UserModel currentUser;
 
+    private GroupModel group;
+
     private async Task LogOut()
     {
         await authServ.Logout();
@@ -75,6 +84,7 @@
     {
         var authState = await authProvider.GetAuthenticationStateAsync();
         currentUser = await userServ.GetCurrentUser(authState.User.Identity.Name);
+        group = await groupServ.GetGroup(currentUser.GroupId);
 
 
     }

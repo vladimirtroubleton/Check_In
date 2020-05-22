@@ -2954,6 +2954,20 @@
         "runtime": {
           "bin/placeholder/AuthDataLayer.dll": {}
         }
+      },
+      "QuestionDataLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.4",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "bin/placeholder/QuestionDataLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QuestionDataLayer.dll": {}
+        }
       }
     }
   },
@@ -9281,6 +9295,11 @@
       "type": "project",
       "path": "../AuthDataLayer/AuthDataLayer.csproj",
       "msbuildProject": "../AuthDataLayer/AuthDataLayer.csproj"
+    },
+    "QuestionDataLayer/1.0.0": {
+      "type": "project",
+      "path": "../QuestionDataLayer/QuestionDataLayer.csproj",
+      "msbuildProject": "../QuestionDataLayer/QuestionDataLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9291,7 +9310,8 @@
       "Microsoft.AspNetCore.Blazor.HttpClient >= 3.2.0-preview3.20168.3",
       "Microsoft.EntityFrameworkCore >= 3.1.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.4",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.2"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.2",
+      "QuestionDataLayer >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -9327,6 +9347,9 @@
           "projectReferences": {
             "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj": {
               "projectPath": "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj"
+            },
+            "D:\\Projects\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj": {
+              "projectPath": "D:\\Projects\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj"
             }
           }
         }

@@ -96,7 +96,16 @@ namespace Check_InAdmin.Controllers
             return View(questMini);
 
         }
+        [HttpGet]
+        public async Task<IActionResult> DeleteQuestion(int id)
+        {
+            var quest = questinosRepository.GetQuestionsById(id);
+            await questinosRepository.DeleteQuestion(id);
 
-        
+            return RedirectToAction("Index");
+
+        }
+
+
     }
 }

@@ -1,0 +1,75 @@
+﻿@page "/questionUser"
+@using AuthDataLayer.Models
+@using QuestionDataLayer.ViewModels
+@inject AuthenticationStateProvider authProvider
+@inject NavigationManager uriHelper
+@inject Check_In.Services.users.UserService userServ
+@inject Check_In.Services.Question.QuestionService questServ
+
+@if (currentUser == null)
+{
+    <div class="container">
+        <div class="row">
+            <h4>Загрузка</h4>
+        </div>
+    </div>
+}
+else
+{
+    @if (questions != null)
+    {
+        <div class="container">
+
+            <div class="row text-center">
+                <h4>Заполните опросы пожалуйста</h4>
+            </div>
+            @foreach (var quest in questions)
+            {
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">Название опроса</div>
+                                <div class="card-title"><h4>@quest.QuestionName</h4></div>
+                                <div class="card-title">Группа</div>
+                                <div class="card-title">@quest.GroupName</div>
+                                <div class="card-title">Вопросы:</div>
+                                @foreach (var miniQ in quest.Questions)
+                                {
+                                    <div class="card-text">@miniQ</div>
+                                }
+
+                                <a href="questionResponseAdd/@quest.QuestionId" class="btn btn-outline-success">Заполнить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="container">
+            <div class="row">
+                <h4>Ну опросов пока нет</h4>
+            </div>
+        </div>
+    }
+
+}
+
+
+@code {
+
+    UserModel currentUser;
+
+    QuestionViewModel[] questions;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await authProvider.GetAuthenticationStateAsync();
+        currentUser = await userServ.GetCurrentUser(authState.User.Identity.Name);
+
+        questions =await questServ.GetQuestionsByGroupId(currentUser.GroupId);
+    }
+}

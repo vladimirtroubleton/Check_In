@@ -18,6 +18,7 @@ namespace AuthDataLayer.ViewModels
         public string Surname { get; set; }
         [Required(ErrorMessage = "Нужно ввести")]
         [MaxLength(60)]
+        [DataType(DataType.Password , ErrorMessage ="Ну почта так не работает")]
         public string Email { get; set; }
         [Required(ErrorMessage = "Нужно ввести")]
        
@@ -25,7 +26,7 @@ namespace AuthDataLayer.ViewModels
         [MaxLength(3, ErrorMessage = "Вы так стары товарищ?")]
         public string Age { get; set; }
         [Required(ErrorMessage = "Нужно ввести")]
-       
+        [MinLength(8 , ErrorMessage ="Ну так не пойдет, минимум 8 символов")]
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Нужно ввести")]

@@ -52,10 +52,10 @@
                 <div class="form-group">
                     @if (groupView != null)
                     {
-                        <InputSelect @bind-Value="userModel.GroupId" class="form-control">
+                        <InputSelect @bind-Value="groupId" class="form-control">
                             @foreach (var item in groupView)
                                 {
-                                <option value="@item.Id">@item.Name</option>
+                                <option value="@item.Id.ToString()">@item.Name</option>
                                 }
                             /**/
                         </InputSelect>
@@ -82,6 +82,8 @@
 
     GroupModel[] groupView;
 
+    string groupId = "Нужно выбрать группу";
+
     string loginStatus;
 
     string styleData;
@@ -90,6 +92,7 @@
 
     private async Task Registering()
     {
+        userModel.GroupId = Guid.Parse(groupId);
 
         if (!resultCheckLogin)
         {

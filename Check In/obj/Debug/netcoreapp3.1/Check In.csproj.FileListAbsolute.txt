@@ -354,3 +354,9 @@ D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Check In.Views.pd
 D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Check In.csproj.CopyComplete
 D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Check In.dll
 D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Check In.pdb
+D:\Projects\OPROSNIK\Check_In\Check In\bin\Debug\netcoreapp3.1\QuestionDataLayer.dll
+D:\Projects\OPROSNIK\Check_In\Check In\bin\Debug\netcoreapp3.1\QuestionDataLayer.pdb
+D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Questions\QuestionsUser.razor.g.cs
+D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Razor\Pages\Questions\QuestionsUser.razor.g.cs
+D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Questions\QuestionResponseAdd.razor.g.cs
+D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Razor\Pages\Questions\QuestionResponseAdd.razor.g.cs

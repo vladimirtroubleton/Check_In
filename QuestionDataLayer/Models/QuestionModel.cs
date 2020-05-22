@@ -19,23 +19,23 @@ namespace QuestionDataLayer.Models
         [Required(ErrorMessage = "Необходимо ввести хотя бы один вопрос")]
         [MaxLength(40, ErrorMessage = "Сочинения не поддерживаются")]
         [MinLength(4, ErrorMessage = "А можно подробнее")]
-        public string QuestionName { get; set; }
+        public string Question { get; set; }
         [Display(Name = "Первый вопрос")]
         [MaxLength(40, ErrorMessage = "Сочинения не поддерживаются")]
         [MinLength(4, ErrorMessage = "А можно подробнее")]
-        public string QuestionName1 { get; set; }
+        public string Question1 { get; set; }
         [MaxLength(40, ErrorMessage = "Сочинения не поддерживаются")]
         [MinLength(4, ErrorMessage = "А можно подробнее")]
         [Display(Name = "Второй вопрос")]
-        public string QuestionName2 { get; set; }
+        public string Question2 { get; set; }
         [Display(Name = "Третий вопрос")]
         [MaxLength(40, ErrorMessage = "Сочинения не поддерживаются")]
         [MinLength(4, ErrorMessage = "А можно подробнее")]
-        public string QuestionName3 { get; set; }
+        public string Question3 { get; set; }
         [Display(Name = "Четвертый вопрос")]
         [MaxLength(40, ErrorMessage = "Сочинения не поддерживаются")]
         [MinLength(4, ErrorMessage = "А можно подробнее")]
-        public string QuestionName4 { get; set; }
+        public string Question4 { get; set; }
         [Display(Name = "Выберите группу")]
         [Required(ErrorMessage = "Обозначьте группу")]
         public Guid GroupId { get; set; }

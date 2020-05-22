@@ -45,5 +45,10 @@ namespace QuestionDataLayer.Repository
             }
             await context.SaveChangesAsync();
         }
+
+        public Task<QuestionModel[]> GetQuestionsByGroupId(Guid groupId)
+        {
+            return Task.FromResult(context.Questions.Where(x => x.GroupId == groupId).ToArray());
+        }
     }
 }
