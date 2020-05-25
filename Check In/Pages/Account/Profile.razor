@@ -88,11 +88,10 @@
         {
             await   authServ.Logout();
             uriHelper.NavigateTo("/loginControl");
+            return;
         }
-        else
-        {
             group = await groupServ.GetGroup(currentUser.GroupId);
-        }
+        
      
 
 

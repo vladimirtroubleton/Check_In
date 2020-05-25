@@ -362,3 +362,7 @@ D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\RazorDeclaration\
 D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Razor\Pages\Questions\QuestionResponseAdd.razor.g.cs
 D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Questions\CheckResponse.razor.g.cs
 D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Razor\Pages\Questions\CheckResponse.razor.g.cs
+D:\Projects\OPROSNIK\Check_In\Check In\bin\Debug\netcoreapp3.1\EventsDataLayer.dll
+D:\Projects\OPROSNIK\Check_In\Check In\bin\Debug\netcoreapp3.1\EventsDataLayer.pdb
+D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Events\EventView.razor.g.cs
+D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Razor\Pages\Events\EventView.razor.g.cs

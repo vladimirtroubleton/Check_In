@@ -1,0 +1,27 @@
+﻿@page "/events"
+@using AuthDataLayer.Models
+@inject Check_In.Services.IAuthService authServ
+@inject AuthenticationStateProvider authProvider
+@inject NavigationManager uriHelper
+@inject Check_In.Services.users.UserService userServ
+@inject Check_In.Services.Groups.GroupService groupServ
+
+
+@code {
+    private UserModel currentUser;
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await authProvider.GetAuthenticationStateAsync();
+        currentUser = await userServ.GetCurrentUser(authState.User.Identity.Name);
+        if(currentUser == null)
+        {
+            await   authServ.Logout();
+            uriHelper.NavigateTo("/loginControl");
+            return;
+        }
+       
+     
+
+
+    }
+}

@@ -34,7 +34,9 @@ namespace EventsDataLayer.Resositories
             {
                 eventContext.Events.Remove(model);
             }
+          
             await eventContext.SaveChangesAsync();
+            await RemoveEventConnect(id);
         }
 
         public async Task<EventModel> GetEventById(int id)

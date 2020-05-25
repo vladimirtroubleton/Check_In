@@ -6,6 +6,7 @@ using AuthDataLayer;
 using AuthDataLayer.Repositories;
 using AuthDataLayer.Utils;
 using Check_InAdmin.ModelBuilders;
+using EventsDataLayer;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,6 +38,8 @@ namespace Check_InAdmin
               options.UseSqlServer(Configuration.GetConnectionString("DbConnectionString")));       
             services.AddDbContext<QuestionsContext>(options =>
               options.UseSqlServer(Configuration.GetConnectionString("QuestionContext")));
+            services.AddDbContext<EventContext>(options =>
+         options.UseSqlServer(Configuration.GetConnectionString("EventContext")));
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                           .AddCookie(options =>
                           {

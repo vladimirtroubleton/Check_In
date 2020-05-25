@@ -14,6 +14,7 @@ using Check_In.Services;
 using Check_In.Services.Groups;
 using Check_In.Services.Question;
 using Check_In.Services.users;
+using EventsDataLayer;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
@@ -54,6 +55,8 @@ namespace Check_In
                options.UseSqlServer(Configuration.GetConnectionString("DbConnectionString")));  
             services.AddDbContext<QuestionsContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("QuestionContext")));
+            services.AddDbContext<EventContext>(options =>
+              options.UseSqlServer(Configuration.GetConnectionString("EventContext")));
 
             services.AddAuthorizationCore(config =>
             {

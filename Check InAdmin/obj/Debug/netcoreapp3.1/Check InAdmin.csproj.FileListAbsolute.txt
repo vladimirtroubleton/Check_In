@@ -297,3 +297,5 @@ D:\Projects\OPROSNIK\Check_In\Check InAdmin\bin\Debug\netcoreapp3.1\QuestionData
 D:\Projects\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 D:\Projects\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddQuestion.cshtml.g.cs
 D:\Projects\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\GetQuestion.cshtml.g.cs
+D:\Projects\OPROSNIK\Check_In\Check InAdmin\bin\Debug\netcoreapp3.1\EventsDataLayer.dll
+D:\Projects\OPROSNIK\Check_In\Check InAdmin\bin\Debug\netcoreapp3.1\EventsDataLayer.pdb
