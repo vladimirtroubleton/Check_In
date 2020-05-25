@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YsXvG5M8OSmekzvaMGuRuGus67DNT5F7bMPw/tjIxTRpgx9Lr37iEuFUa0UMvLyhzUNUklUGwqoFEX3bsWH9pA==",
+  "dgSpecHash": "qHRajncmMwkgwx6L/jU5TyIP8o0cfd4G5P17hSduilCjd74cvO9r+hMK2dsS+IytBY7wrmreF+FfqvRwDH2oCA==",
   "success": true,
-  "projectFilePath": "D:\\Develop\\OPROSNIK\\Check In\\Check In.csproj",
+  "projectFilePath": "D:\\Release\\OPROSNIK\\Check_In\\Check In\\Check In.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vladimirtroubleton\\.nuget\\packages\\blazored.localstorage\\2.1.5\\blazored.localstorage.2.1.5.nupkg.sha512",
     "C:\\Users\\vladimirtroubleton\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

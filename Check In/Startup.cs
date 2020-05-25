@@ -11,10 +11,12 @@ using AuthDataLayer.Repositories;
 using AuthDataLayer.Utils;
 using Blazored.LocalStorage;
 using Check_In.Services;
+using Check_In.Services.Event;
 using Check_In.Services.Groups;
 using Check_In.Services.Question;
 using Check_In.Services.users;
 using EventsDataLayer;
+using EventsDataLayer.Resositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
@@ -93,7 +95,9 @@ namespace Check_In
             services.AddScoped<IGroupsRepository, GroupsRepository>();
             services.AddScoped<IQuestinosRepository, QuestinosRepository>();
             services.AddScoped<IQuestionModelBuilder, QuestionModelBuilder>();
+            services.AddScoped<IEventRepository, EventRepository>();
             services.AddScoped<UserService>();
+            services.AddScoped<EventService>();
 
             services.AddScoped<GroupService>();
             services.AddScoped<QuestionService>();

@@ -1,14 +1,43 @@
-﻿@page "/events"
+﻿@page "/events/{Id:int}"
 @using AuthDataLayer.Models
+@using EventsDataLayer.Models
 @inject Check_In.Services.IAuthService authServ
 @inject AuthenticationStateProvider authProvider
 @inject NavigationManager uriHelper
 @inject Check_In.Services.users.UserService userServ
 @inject Check_In.Services.Groups.GroupService groupServ
+@inject Check_In.Services.Event.EventService eventServ
 
+    <div class="container">
+        @foreach (var even in eventsForUser) 
+        { 
+            <hr>
+            <div class="row text-center">
+                <div class="col-12 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">Название события</div>
+                            <div class="card-title"><h4>@even.Title</h4></div>
+                            <div class="card-title">Описание</div>
+                            <div class="card-title">@even.Description</div>
+                            <div class="card-title">Вопросы:</div>
+                       
+
+                            <a href="questionResponseAdd/@even.EventId" class="btn btn-outline-success">Я иду!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 
 @code {
+    [Parameter]
+    public int Id { get; set; }
+
     private UserModel currentUser;
+    private EventModel[] eventsForUser;
+    private EventConnectModel[] eventConnectModels;
     protected override async Task OnInitializedAsync()
     {
         var authState = await authProvider.GetAuthenticationStateAsync();
@@ -19,8 +48,9 @@
             uriHelper.NavigateTo("/loginControl");
             return;
         }
-       
-     
+
+        eventsForUser = await eventServ.GetEventsByGroupUser(currentUser.GroupId);
+
 
 
     }

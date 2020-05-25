@@ -1,0 +1,35 @@
+﻿@model IEnumerable<EventsDataLayer.Models.EventModel>
+
+@{
+    ViewData["Title"] = "EventsViewGetByGroup";
+}
+<div class="row">
+    <div class="col-6 mx-auto text-center">
+       Группа : @ViewBag.GroupThis.Name
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-12 mx-auto text-center">
+        @foreach (var item in Model)
+        {
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-text">
+                        Название события
+                    </div>
+                    <div class="card-title">
+                        <h4> @item.Title</h4>
+                    </div>
+                    <div class="card-text">
+                        Подпись к событию
+                    </div>
+                    <div class="card-title">
+                        <h4> @item.Description</h4>
+                    </div>
+                    <a href="#" class="btn btn-outline-success">Информация о событии</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

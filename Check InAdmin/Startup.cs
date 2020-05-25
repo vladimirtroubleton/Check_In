@@ -7,6 +7,7 @@ using AuthDataLayer.Repositories;
 using AuthDataLayer.Utils;
 using Check_InAdmin.ModelBuilders;
 using EventsDataLayer;
+using EventsDataLayer.Resositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -56,6 +57,7 @@ namespace Check_InAdmin
             services.AddScoped<IDataInViewModelBuilder, DataInViewModelBuilder>();
             services.AddScoped<IQuestinosRepository, QuestinosRepository>();
             services.AddScoped<IQuestionModelBuilder, QuestionModelBuilder>();
+            services.AddScoped<IEventRepository, EventRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

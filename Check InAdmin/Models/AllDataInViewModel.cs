@@ -9,7 +9,7 @@ namespace Check_InAdmin.Models
 {
     public class AllDataInViewModel
     {
-        public QuestionModel[] Questions { get; set; }
+
         public UserModel[] Users { get; set; }
         public GroupModel[] Groups { get; set; }
     }

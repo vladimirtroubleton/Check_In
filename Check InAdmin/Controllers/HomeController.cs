@@ -13,6 +13,8 @@ using QuestionDataLayer.Repository;
 using QuestionDataLayer.Models;
 using QuestionDataLayer.ModelBuilders;
 using QuestionDataLayer.ViewModels;
+using EventsDataLayer.Resositories;
+using EventsDataLayer.Models;
 
 namespace Check_InAdmin.Controllers
 {
@@ -24,13 +26,15 @@ namespace Check_InAdmin.Controllers
         private IUsersRepository usersRepository;
         private IQuestinosRepository questinosRepository;
         private IQuestionModelBuilder questionBuilder;
+        private IEventRepository eventRepository;
 
-        public HomeController(IGroupsRepository groupsRepository, IUsersRepository usersRepository, IQuestinosRepository questinosRepository, IQuestionModelBuilder questionBuilder)
+        public HomeController(IGroupsRepository groupsRepository, IUsersRepository usersRepository, IQuestinosRepository questinosRepository, IQuestionModelBuilder questionBuilder, IEventRepository eventRepository)
         {
             this.groupsRepository = groupsRepository;
             this.usersRepository = usersRepository;
             this.questinosRepository = questinosRepository;
             this.questionBuilder = questionBuilder;
+            this.eventRepository = eventRepository;
         }
 
         public async Task<IActionResult> Index()
@@ -38,8 +42,7 @@ namespace Check_InAdmin.Controllers
             var allDataView = new AllDataInViewModel
             {
                 Users = await usersRepository.GetAllUsers(),
-                Groups = await groupsRepository.GetGroups(),
-                Questions =await questinosRepository.GetQuestions()
+                Groups = await groupsRepository.GetGroups()
             };
             return View(allDataView);
         }
@@ -117,6 +120,49 @@ namespace Check_InAdmin.Controllers
 
         }
 
+       
 
+        [HttpGet]
+        public async Task<IActionResult> EventCreate()
+        {
+            ViewBag.Groups = await groupsRepository.GetGroups();
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> EventCreate(EventModel eventModel)
+        {
+            eventModel.Active = true;
+            await eventRepository.AddEvent(eventModel);
+            return RedirectToAction("EventsView");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EventsViewGetByGroup(Guid id)
+        {
+            ViewBag.GroupThis = await groupsRepository.GetGroupById(id);
+            var events = await eventRepository.GetEventsByGroupId(id);
+            return View(events);
+
+
+
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> QuestionViewGetByGroup(Guid id)
+        {
+            ViewBag.GroupThis = await groupsRepository.GetGroupById(id) ;
+            var questions = await questinosRepository.GetQuestionsByGroupId(id);
+            return View(questions);
+
+
+
+        }
+
+        public async Task<IActionResult> GetResponses(int id)
+        {
+            var responses = await questinosRepository.GetResponseByQuestionId(id);
+
+            return View(responses);
+        }
     }
 }

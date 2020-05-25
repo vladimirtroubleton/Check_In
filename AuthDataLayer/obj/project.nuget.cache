@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q0PIVYTFZFG0GnKQ7UWaB/y0hJUZgTulIztpY0UqvrSF9Wyto6ICWVGPQHNF3jpFAOnsvRcU8SGJeLfZcQSOKg==",
+  "dgSpecHash": "/tEPCXUn+WP6dTadck1L07JTYcFUZgeDKAWKhO2Qv2fKPHCH5OZXu6uY3lkQFycd377h2KQdL8/daKHvRFQsVQ==",
   "success": true,
-  "projectFilePath": "D:\\Develop\\OPROSNIK\\AuthDataLayer\\AuthDataLayer.csproj",
+  "projectFilePath": "D:\\Release\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vladimirtroubleton\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\vladimirtroubleton\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

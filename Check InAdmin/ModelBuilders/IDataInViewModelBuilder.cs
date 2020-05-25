@@ -6,6 +6,6 @@ namespace Check_InAdmin.ModelBuilders
 {
     public interface IDataInViewModelBuilder
     {
-        AllDataInViewModel GetViewData(UserModel[] users, QuestionModel[] questions, GroupModel[] groups);
+        AllDataInViewModel GetViewData(UserModel[] users, GroupModel[] groups);
     }
 }

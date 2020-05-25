@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\OPROSNIK\\Check_In\\Check InAdmin\\Check InAdmin.csproj": {}
+    "D:\\Release\\OPROSNIK\\Check_In\\Check InAdmin\\Check InAdmin.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj": {
+    "D:\\Release\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj",
+        "projectUniqueName": "D:\\Release\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj",
         "projectName": "AuthDataLayer",
-        "projectPath": "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj",
-        "packagesPath": "C:\\Users\\it013\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\obj\\",
+        "projectPath": "D:\\Release\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj",
+        "packagesPath": "C:\\Users\\vladimirtroubleton\\.nuget\\packages\\",
+        "outputPath": "D:\\Release\\OPROSNIK\\Check_In\\AuthDataLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\it013\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\vladimirtroubleton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -71,26 +67,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\OPROSNIK\\Check_In\\Check InAdmin\\Check InAdmin.csproj": {
+    "D:\\Release\\OPROSNIK\\Check_In\\Check InAdmin\\Check InAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\OPROSNIK\\Check_In\\Check InAdmin\\Check InAdmin.csproj",
+        "projectUniqueName": "D:\\Release\\OPROSNIK\\Check_In\\Check InAdmin\\Check InAdmin.csproj",
         "projectName": "Check InAdmin",
-        "projectPath": "D:\\Projects\\OPROSNIK\\Check_In\\Check InAdmin\\Check InAdmin.csproj",
-        "packagesPath": "C:\\Users\\it013\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\OPROSNIK\\Check_In\\Check InAdmin\\obj\\",
+        "projectPath": "D:\\Release\\OPROSNIK\\Check_In\\Check InAdmin\\Check InAdmin.csproj",
+        "packagesPath": "C:\\Users\\vladimirtroubleton\\.nuget\\packages\\",
+        "outputPath": "D:\\Release\\OPROSNIK\\Check_In\\Check InAdmin\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\it013\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\vladimirtroubleton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -102,11 +94,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj": {
-                "projectPath": "D:\\Projects\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj"
+              "D:\\Release\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj": {
+                "projectPath": "D:\\Release\\OPROSNIK\\Check_In\\AuthDataLayer\\AuthDataLayer.csproj"
               },
-              "D:\\Projects\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj": {
-                "projectPath": "D:\\Projects\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj"
+              "D:\\Release\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj": {
+                "projectPath": "D:\\Release\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj"
+              },
+              "D:\\Release\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj": {
+                "projectPath": "D:\\Release\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj"
               }
             }
           }
@@ -130,7 +125,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.3, )"
             }
           },
           "imports": [
@@ -151,26 +146,81 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj": {
+    "D:\\Release\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj",
-        "projectName": "QuestionDataLayer",
-        "projectPath": "D:\\Projects\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj",
-        "packagesPath": "C:\\Users\\it013\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\OPROSNIK\\Check_In\\QuestionDataLayer\\obj\\",
+        "projectUniqueName": "D:\\Release\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj",
+        "projectName": "EventsDataLayer",
+        "projectPath": "D:\\Release\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj",
+        "packagesPath": "C:\\Users\\vladimirtroubleton\\.nuget\\packages\\",
+        "outputPath": "D:\\Release\\OPROSNIK\\Check_In\\EventsDataLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\it013\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\vladimirtroubleton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Release\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Release\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj",
+        "projectName": "QuestionDataLayer",
+        "projectPath": "D:\\Release\\OPROSNIK\\Check_In\\QuestionDataLayer\\QuestionDataLayer.csproj",
+        "packagesPath": "C:\\Users\\vladimirtroubleton\\.nuget\\packages\\",
+        "outputPath": "D:\\Release\\OPROSNIK\\Check_In\\QuestionDataLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\vladimirtroubleton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -218,7 +268,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

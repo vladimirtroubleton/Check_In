@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EventsDataLayer.Resositories
 {
-    public class EventRepository
+    public class EventRepository : IEventRepository
     {
         private EventContext eventContext;
         object locker = new object();
@@ -20,7 +20,7 @@ namespace EventsDataLayer.Resositories
 
         public async Task AddEvent(EventModel model)
         {
-            lock(locker)
+            lock (locker)
             {
                 eventContext.Events.Add(model);
             }
@@ -29,12 +29,12 @@ namespace EventsDataLayer.Resositories
 
         public async Task RemoveEvent(int id)
         {
-            var model =await GetEventById(id);
+            var model = await GetEventById(id);
             lock (locker)
             {
                 eventContext.Events.Remove(model);
             }
-          
+
             await eventContext.SaveChangesAsync();
             await RemoveEventConnect(id);
         }
@@ -46,7 +46,7 @@ namespace EventsDataLayer.Resositories
 
         public async Task<EventConnectModel[]> GetEventConnectByEventId(int id)
         {
-            return await eventContext.EventsConnect.Where( x=> x.EventId == id).ToArrayAsync();
+            return await eventContext.EventsConnect.Where(x => x.EventId == id).ToArrayAsync();
         }
 
         public async Task<EventConnectModel[]> GetEventConnectByGroupId(Guid id)
@@ -78,5 +78,9 @@ namespace EventsDataLayer.Resositories
             await eventContext.SaveChangesAsync();
         }
 
+        public async Task<EventModel[]> GetEventsByGroupId(Guid id)
+        {
+            return await eventContext.Events.Where(x => x.GroupId == id).ToArrayAsync();
+        }
     }
 }

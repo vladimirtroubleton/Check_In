@@ -1,0 +1,58 @@
+﻿@model IEnumerable<QuestionDataLayer.Models.QuestionResponseModel>
+
+@{
+    ViewData["Title"] = "GetResponses";
+}
+ 
+@if (Model.FirstOrDefault() != null)
+{
+<div class="row">
+    <div class="col-6 mx-auto">
+
+        <h4>Название опроса</h4>
+        <p>@Model.FirstOrDefault().Name</p>
+        <h4>Название группы</h4>
+        <p>@Model.FirstOrDefault().GroupName</p>
+        <h4>Вопросы:</h4>
+        <p>@Model.FirstOrDefault().Question</p>
+        <p>@Model.FirstOrDefault().Question1</p>
+        <p>@Model.FirstOrDefault().Question2</p>
+        <p>@Model.FirstOrDefault().Question3</p>
+        <p>@Model.FirstOrDefault().Question4</p>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-6 mx-auto text-center">
+        <h4>Ответы</h4>
+    </div>
+</div>
+<div class="row">
+    @foreach (var response in Model)
+    {
+        <div class="col-6 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Ответы пользователя: @response.UserLogin</h4>
+                    <p>@response.QuestionResponse</p>
+                    <p>@response.Question1Response</p>
+                    <p>@response.Question2Response</p>
+                    <p>@response.Question3Response</p>
+                    <p>@response.Question4Response</p>
+                </div>
+            </div>
+           
+
+           
+        </div>
+    }
+    </div>
+}
+else 
+{
+    <div class="row">
+        <div class="col-6 mx-auto text-center">
+            <p class="display-4">Ответов нет</p>
+        </div>
+    </div>
+}

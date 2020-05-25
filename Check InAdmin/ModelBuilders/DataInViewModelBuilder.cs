@@ -10,12 +10,11 @@ namespace Check_InAdmin.ModelBuilders
 {
     public class DataInViewModelBuilder : IDataInViewModelBuilder
     {
-        public AllDataInViewModel GetViewData(UserModel[] users, QuestionModel[] questions, GroupModel[] groups)
+        public AllDataInViewModel GetViewData(UserModel[] users, GroupModel[] groups)
         {
             return new AllDataInViewModel
             {
                 Users = users,
-                Questions = questions,
                 Groups = groups
             };
         }

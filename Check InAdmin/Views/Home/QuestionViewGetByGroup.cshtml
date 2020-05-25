@@ -1,0 +1,36 @@
+﻿@model IEnumerable<QuestionDataLayer.Models.QuestionModel>
+
+@{
+    ViewData["Title"] = "QuestionViewGetByGroup";
+}
+
+    <div class="row">
+        <div class="col-6 mx-auto text-center">
+          Опросы группы : @ViewBag.GroupThis.Name
+        </div>
+    </div>
+    <hr />
+    <div class="col-8 mx-auto text-center">
+        @foreach (var item in Model)
+        {
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    Название опроса
+                </div>
+                <div class="card-title">
+                    <h4> @item.Name</h4>
+                </div>
+                <div class="card-text">
+                    Ключевой вопрос
+                </div>
+                <div class="card-title">
+                    <h4> @item.Question</h4>
+                </div>
+                <a href="/Home/DeleteQuestion?id=@item.Id" class="btn btn-outline-danger">Удалить</a>
+                <a href="/Home/GetResponses?id=@item.Id" class="btn btn-outline-success">Просмотр ответов</a>
+            </div>
+
+            </div>
+        }
+    </div>

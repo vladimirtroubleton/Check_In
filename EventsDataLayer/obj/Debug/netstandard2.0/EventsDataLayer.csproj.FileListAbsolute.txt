@@ -6,3 +6,12 @@ D:\Projects\OPROSNIK\Check_In\EventsDataLayer\bin\Debug\netstandard2.0\EventsDat
 D:\Projects\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.csprojAssemblyReference.cache
 D:\Projects\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.dll
 D:\Projects\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.pdb
+D:\Release\OPROSNIK\Check_In\EventsDataLayer\bin\Debug\netstandard2.0\EventsDataLayer.deps.json
+D:\Release\OPROSNIK\Check_In\EventsDataLayer\bin\Debug\netstandard2.0\EventsDataLayer.dll
+D:\Release\OPROSNIK\Check_In\EventsDataLayer\bin\Debug\netstandard2.0\EventsDataLayer.pdb
+D:\Release\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.csprojAssemblyReference.cache
+D:\Release\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.csproj.CoreCompileInputs.cache
+D:\Release\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.AssemblyInfoInputs.cache
+D:\Release\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.AssemblyInfo.cs
+D:\Release\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.dll
+D:\Release\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.pdb

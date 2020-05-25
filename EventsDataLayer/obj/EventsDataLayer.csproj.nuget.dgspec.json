@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj": {}
+    "D:\\Release\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj": {
+    "D:\\Release\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj",
+        "projectUniqueName": "D:\\Release\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj",
         "projectName": "EventsDataLayer",
-        "projectPath": "D:\\Projects\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj",
-        "packagesPath": "C:\\Users\\it013\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\OPROSNIK\\Check_In\\EventsDataLayer\\obj\\",
+        "projectPath": "D:\\Release\\OPROSNIK\\Check_In\\EventsDataLayer\\EventsDataLayer.csproj",
+        "packagesPath": "C:\\Users\\vladimirtroubleton\\.nuget\\packages\\",
+        "outputPath": "D:\\Release\\OPROSNIK\\Check_In\\EventsDataLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\it013\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\vladimirtroubleton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -63,7 +59,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
