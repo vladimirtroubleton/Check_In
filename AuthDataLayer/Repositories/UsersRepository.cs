@@ -51,5 +51,10 @@ namespace AuthDataLayer.Repositories
         {
             return context.Users.Select(x=> x.Login).Contains(login);
         }
+
+        public async Task<UserModel[]> GetUsersByGroupId(Guid groupId)
+        {
+            return await context.Users.Where(x => x.GroupId == groupId).ToArrayAsync();
+        }
     }
 }

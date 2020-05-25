@@ -1,10 +1,10 @@
 ﻿using QuestionDataLayer.Models;
 using QuestionDataLayer.ViewModels;
-using QuestionDataLayer.ViewModels.MiniModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace QuestionDataLayer.ModelBuilders
 {
@@ -25,6 +25,55 @@ namespace QuestionDataLayer.ModelBuilders
             return questMini;
         }
 
+        public Task<QuestionResponseModel> GetResponserModel(QuestionViewModel model , int counQuest , string userLogin)
+        {
+            QuestionResponseModel questionResponseModel = new QuestionResponseModel { Id = model.QuestionId ,
+                                                                                        Name = model.QuestionName,
+                                                                                        CountQest = counQuest ,
+                                                                                        GroupId = model.GroupId ,
+                                                                                        GroupName = model.GroupName,
+                                                                                        UserLogin = userLogin};
 
+            switch (counQuest)
+            {
+                case 1:
+                    {
+                        questionResponseModel.Question = model.Questions[0];
+                        break;
+                    }
+                case 2:
+                    {
+                        questionResponseModel.Question = model.Questions[0];
+                        questionResponseModel.Question1 = model.Questions[1];
+                        break;
+                    }
+                case 3:
+                    {
+                        questionResponseModel.Question = model.Questions[0];
+                        questionResponseModel.Question1 = model.Questions[1];
+                        questionResponseModel.Question2 = model.Questions[2];
+                        break;
+                    }
+                case 4:
+                    {
+                        questionResponseModel.Question = model.Questions[0];
+                        questionResponseModel.Question1 = model.Questions[1];
+                        questionResponseModel.Question2 = model.Questions[2];
+                        questionResponseModel.Question3 = model.Questions[3];
+                        break;
+                    }
+                case 5:
+                    {
+                        questionResponseModel.Question = model.Questions[0];
+                        questionResponseModel.Question1 = model.Questions[1];
+                        questionResponseModel.Question2 = model.Questions[2];
+                        questionResponseModel.Question3 = model.Questions[3];
+                        questionResponseModel.Question4 = model.Questions[4];
+                        break;
+                    }
+            }
+
+            return Task.FromResult(questionResponseModel);
+        }
     }
 }

@@ -1,0 +1,8 @@
+D:\Projects\OPROSNIK\Check_In\EventsDataLayer\bin\Debug\netstandard2.0\EventsDataLayer.deps.json
+D:\Projects\OPROSNIK\Check_In\EventsDataLayer\bin\Debug\netstandard2.0\EventsDataLayer.dll
+D:\Projects\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.AssemblyInfoInputs.cache
+D:\Projects\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.AssemblyInfo.cs
+D:\Projects\OPROSNIK\Check_In\EventsDataLayer\bin\Debug\netstandard2.0\EventsDataLayer.pdb
+D:\Projects\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.csprojAssemblyReference.cache
+D:\Projects\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.dll
+D:\Projects\OPROSNIK\Check_In\EventsDataLayer\obj\Debug\netstandard2.0\EventsDataLayer.pdb

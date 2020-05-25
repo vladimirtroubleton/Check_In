@@ -4585,7 +4585,8 @@ input[type="button"].btn-block {
 }
 
 .card-title {
-  margin-bottom: 0.75rem;
+    font: 15pt sans-serif;
+    margin-bottom: 0.75rem;
 }
 
 .card-subtitle {

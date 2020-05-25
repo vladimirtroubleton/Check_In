@@ -9,6 +9,7 @@ namespace QuestionDataLayer
     public class QuestionsContext : DbContext
     {
         public DbSet<QuestionModel> Questions { get; set; }
+        public DbSet<QuestionResponseModel> QuestionsRespons { get; set; }
         public QuestionsContext(DbContextOptions<QuestionsContext> options) : base(options)
         {
             Database.EnsureCreated();

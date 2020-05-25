@@ -9,52 +9,47 @@
 <AuthorizeView>
     <Authorized>
         <div class="container">
-            @if (question != null)
+            @if (question != null && questionForForm != null)
             {
-                <div class="row">
-                    <div class="col-12 mx-auto">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">Название опроса</div>
-                                <div class="card-title"><h4>@question.QuestionName</h4></div>
-                                <div class="card-title">Группа</div>
-                                <div class="card-title">@question.GroupName</div>
-                                <div class="card-title">Вопросы:</div>
-                                @for(int i = 0; i < questCount; i++)
-                                {
-                                    <p class="card-title">Вопрос № @i</p>
-                                    <div class="card-text">@question.Questions[i]</div>
-                                }
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <EditForm Model="@questionForForm" OnValidSubmit="ActivateTextBox" Context="addQ">
+                <EditForm Model="@questionForForm" OnValidSubmit="RegisterResponse" Context="addQ">
                     <DataAnnotationsValidator />
                     <ValidationSummary Model="@questionForForm" />
                     <div class="row">
                         <div class="col-12 mx-auto">
-                            <div class="form-group" style="@questStyle">
-                                <p>Вопрос №0</p>
-                                <InputText @bind-Value="questionForForm.Question" class="form-control"></InputText>
-                            </div>
-                            <div class="form-group" style="@questStyle1">
-                                <InputText @bind-Value="questionForForm.Question1"></InputText>
-                            </div>
-                            <div class="form-group" style="@questStyle2">
-                                <InputText @bind-Value="questionForForm.Question2"></InputText>
-                            </div>
-                            <div class="form-group" style="@questStyle3">
-                                <InputText @bind-Value="questionForForm.Question3"></InputText>
-                            </div>
-                            <div class="form-group" style="@questStyle4">
-                                <InputText @bind-Value="questionForForm.Question4"></InputText>
-                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-title">Название опроса</div>
+                                    <div class="card-title"><h4>@questionForForm.Name</h4></div>
+                                    <div class="card-title">Группа</div>
+                                    <div class="card-title">@questionForForm.GroupName</div>
+                                    <div class="card-title">Вопросы:</div>
+                                    <div class="form-group" style="@questStyle">
+                                        <p class="counter">Вопрос : @questionForForm.Question</p>
+                                        <InputText @bind-Value="questionForForm.QuestionResponse" class="form-control"></InputText>
+                                    </div>
+                                    <div class="form-group" style="@questStyle1">
+                                        <p class="counter">Вопрос : @questionForForm.Question1</p>
 
-                        </div>
-                    </div>
-                </EditForm>
+                                        <InputText @bind-Value="questionForForm.Question1Response" class="form-control"></InputText>
+                                    </div>
+                                    <div class="form-group" style="@questStyle2">
+                                        <p class="counter">Вопрос : @questionForForm.Question2</p>
+                                        <InputText @bind-Value="questionForForm.Question2Response" class="form-control"></InputText>
+                                    </div>
+                                    <div class="form-group" style="@questStyle3">
+                                        <p class="counter">Вопрос : @questionForForm.Question3</p>
+                                        <InputText @bind-Value="questionForForm.Question3Response" class="form-control"></InputText>
+                                    </div>
+                                    <div class="form-group" style="@questStyle4">
+                                        <p class="counter">Вопрос : @questionForForm.Question4</p>
+                                        <InputText @bind-Value="questionForForm.Question4Response" class="form-control"></InputText>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-success" type="submit"> Ответить! </button>
+                                    </div>
+                                </div>
+                            </div>
+</EditForm>
             }
             else
             {
@@ -74,9 +69,7 @@
 
     QuestionViewModel question;
 
-
-
-    QuestionModel questionForForm = new QuestionModel();
+    QuestionResponseModel questionForForm;
 
     string questStyle = "display:none";
     string questStyle1= "display:none";
@@ -92,10 +85,20 @@
         currentUser = await userServ.GetCurrentUser(authState.User.Identity.Name);
         question = await questServ.GetQuestionsById(Id);
         questCount = question.Questions.Count();
-        await ActivateTextBox();
+
+
+        questionForForm =await questServ.GetResponseModel(question, questCount , currentUser.Login);
+
+        await FormedForm();
     }
 
-    private Task ActivateTextBox()
+    private async Task RegisterResponse()
+    {
+        await questServ.CreateResponse(questionForForm);
+        uriHelper.NavigateTo("/questionUser");
+    }
+
+    private Task FormedForm()
     {
         switch (questCount)
         {
@@ -104,20 +107,20 @@
                     questStyle =  "display:block";
                     break;
                 }
-                case 2:
+            case 2:
                 {
                     questStyle = "";
                     questStyle1 = "";
                     break;
                 }
-                case 3:
+            case 3:
                 {
                     questStyle = "";
                     questStyle1 = "";
                     questStyle2 = "";
                     break;
                 }
-                case 4:
+            case 4:
                 {
                     questStyle = "";
                     questStyle1 = "";
@@ -125,7 +128,7 @@
                     questStyle3 = "";
                     break;
                 }
-                case 5:
+            case 5:
                 {
                     questStyle = "";
                     questStyle1 = "";

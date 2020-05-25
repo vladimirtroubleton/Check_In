@@ -5,59 +5,91 @@
 @inject NavigationManager uriHelper
 @inject Check_In.Services.users.UserService userServ
 @inject Check_In.Services.Question.QuestionService questServ
+@inject Check_In.Services.IAuthService authServ
 
-@if (currentUser == null)
-{
     <div class="container">
-        <div class="row">
-            <h4>Загрузка</h4>
-        </div>
-    </div>
-}
-else
-{
-    @if (questions != null)
-    {
-        <div class="container">
 
-            <div class="row text-center">
-                <h4>Заполните опросы пожалуйста</h4>
+        @if (currentUser == null)
+        {
+
+            <div class="row">
+                <h4>Загрузка</h4>
             </div>
-            @foreach (var quest in questions)
-            {
-                <div class="row">
-                    <div class="col-12 mx-auto">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">Название опроса</div>
-                                <div class="card-title"><h4>@quest.QuestionName</h4></div>
-                                <div class="card-title">Группа</div>
-                                <div class="card-title">@quest.GroupName</div>
-                                <div class="card-title">Вопросы:</div>
-                                @foreach (var miniQ in quest.Questions)
-                                {
-                                    <div class="card-text">@miniQ</div>
-                                }
 
-                                <a href="questionResponseAdd/@quest.QuestionId" class="btn btn-outline-success">Заполнить</a>
+        }
+        else
+        {
+            @if (questions != null)
+            {
+                <div class="container">
+
+                    <div class="row text-center">
+                        <p>Заполните опросы пожалуйста</p>
+                    </div>
+                </div>
+
+                @foreach (var quest in questions)
+                {
+                    @if (NoRespondedQuest.Contains(quest.QuestionId))
+                    {
+                        <hr>
+                        <div class="row text-center">
+                            <div class="col-12 mx-auto">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-title">Название опроса</div>
+                                        <div class="card-title"><h4>@quest.QuestionName</h4></div>
+                                        <div class="card-title">Группа</div>
+                                        <div class="card-title">@quest.GroupName</div>
+                                        <div class="card-title">Вопросы:</div>
+                                        @foreach (var miniQ in quest.Questions)
+                                        {
+                                            <div class="card-text">@miniQ</div>
+                                        }
+
+                                        <a href="questionResponseAdd/@quest.QuestionId" class="btn btn-outline-success">Заполнить</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                    }
+                    else
+                    { <hr>
+                        <div class="row text-center">
+                            <div class="col-12 mx-auto">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-title">Название опроса</div>
+                                        <div class="card-title"><h4>@quest.QuestionName</h4></div>
+                                        <div class="card-title">Группа</div>
+                                        <div class="card-title">@quest.GroupName</div>
+                                        <div class="card-title">Вопросы:</div>
+                                        @foreach (var miniQ in quest.Questions)
+                                        {
+                                            <div class="card-text">@miniQ</div>
+                                        }
+
+                                        <a href="checkResponse/@quest.QuestionId" class="btn btn-outline-success">Посмотреть мой ответ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+            else
+            {
+                <div class="container">
+                    <div class="row">
+                        <h4>Ну опросов пока нет</h4>
                     </div>
                 </div>
             }
-        </div>
-    }
-    else
-    {
-        <div class="container">
-            <div class="row">
-                <h4>Ну опросов пока нет</h4>
-            </div>
-        </div>
-    }
 
-}
 
+        }
+    </div>
 
 @code {
 
@@ -65,11 +97,21 @@ else
 
     QuestionViewModel[] questions;
 
+    Dictionary<int, bool> checkQuestion;
+    int[] NoRespondedQuest;
     protected override async Task OnInitializedAsync()
     {
         var authState = await authProvider.GetAuthenticationStateAsync();
         currentUser = await userServ.GetCurrentUser(authState.User.Identity.Name);
-
-        questions =await questServ.GetQuestionsByGroupId(currentUser.GroupId);
+        if (currentUser == null)
+        {
+            await authServ.Logout();
+            uriHelper.NavigateTo("/loginControl");
+            return;
+        }
+        questions = await questServ.GetQuestionsByGroupId(currentUser.GroupId);
+        questions = questions.OrderByDescending(x => x.QuestionId).ToArray();
+        checkQuestion = await questServ.GetRespondedQuestionByUser(questions.Select(x => x.QuestionId).ToArray(), currentUser.Login);
+        NoRespondedQuest = checkQuestion.Where(x => x.Value == false).Select(x => x.Key).ToArray();
     }
 }

@@ -12,6 +12,8 @@ namespace AuthDataLayer.Repositories
         Task<UserModel> GetUserByLogin(string login);
         Task RemoveUser(UserModel user);
         bool CheckLogin(string login);
+
+        Task<UserModel[]> GetUsersByGroupId(Guid groupId);
         
     }
 }

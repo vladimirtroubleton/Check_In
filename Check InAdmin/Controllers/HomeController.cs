@@ -60,6 +60,12 @@ namespace Check_InAdmin.Controllers
         [HttpGet]
         public async Task<IActionResult> DeleteGroup(Guid id)
         {
+            var users = await usersRepository.GetUsersByGroupId(id);
+            await questinosRepository.DeleteQuestionsDataByGropId(id);
+            foreach (var user in users)
+            {
+               await usersRepository.RemoveUser(user);
+            }
             await groupsRepository.DeleteGroup(id); 
             return RedirectToAction("Index");
         }
@@ -100,6 +106,11 @@ namespace Check_InAdmin.Controllers
         public async Task<IActionResult> DeleteQuestion(int id)
         {
             var quest = questinosRepository.GetQuestionsById(id);
+            var questResps = await questinosRepository.GetResponseByQuestionId(id);
+            foreach (var questResp in questResps)
+            {
+                await questinosRepository.DeleteQuestionResponseByModel(questResp);
+            }
             await questinosRepository.DeleteQuestion(id);
 
             return RedirectToAction("Index");

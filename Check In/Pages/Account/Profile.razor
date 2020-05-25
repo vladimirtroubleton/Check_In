@@ -84,7 +84,16 @@
     {
         var authState = await authProvider.GetAuthenticationStateAsync();
         currentUser = await userServ.GetCurrentUser(authState.User.Identity.Name);
-        group = await groupServ.GetGroup(currentUser.GroupId);
+        if(currentUser == null)
+        {
+            await   authServ.Logout();
+            uriHelper.NavigateTo("/loginControl");
+        }
+        else
+        {
+            group = await groupServ.GetGroup(currentUser.GroupId);
+        }
+     
 
 
     }

@@ -1,5 +1,6 @@
 ﻿using AuthDataLayer.Repositories;
 using QuestionDataLayer.ModelBuilders;
+using QuestionDataLayer.Models;
 using QuestionDataLayer.Repository;
 using QuestionDataLayer.ViewModels;
 using System;
@@ -59,6 +60,26 @@ namespace Check_In.Services.Question
             );
                  
             return questMini;
+        }
+
+        public async Task<QuestionResponseModel> GetResponseModel(QuestionViewModel model , int countQuest , string userLogin)
+        {
+           return await questionModelBuilder.GetResponserModel(model, countQuest, userLogin);
+        }
+
+        public async Task CreateResponse(QuestionResponseModel questionResponse)
+        {
+            await questinosRepository.CreateResponseQuestion(questionResponse);
+        }
+
+        public async Task<Dictionary<int,bool>> GetRespondedQuestionByUser(int[] ids , string userLogin)
+        {
+            return await questinosRepository.CheckResponseUser(ids, userLogin);
+        }
+
+        public async Task<QuestionResponseModel> GetResponseById(int id, string login )
+        {
+            return await questinosRepository.GetResponseByIdAndLogin(id , login);
         }
     }
 }

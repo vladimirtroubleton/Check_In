@@ -360,3 +360,5 @@ D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\RazorDeclaration\
 D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Razor\Pages\Questions\QuestionsUser.razor.g.cs
 D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Questions\QuestionResponseAdd.razor.g.cs
 D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Razor\Pages\Questions\QuestionResponseAdd.razor.g.cs
+D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Questions\CheckResponse.razor.g.cs
+D:\Projects\OPROSNIK\Check_In\Check In\obj\Debug\netcoreapp3.1\Razor\Pages\Questions\CheckResponse.razor.g.cs

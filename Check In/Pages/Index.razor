@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         
-            <h4> Привет выбери интересующий пункт в меню слева </h4>
+            <h4 style="color:coral" class="display-4"> Привет выбери интересующий пункт в меню </h4>
         
     </div>
 </div>
@@ -20,7 +20,8 @@
 
         var authState = await authProvider.GetAuthenticationStateAsync();
         currentUser = await userServ.GetCurrentUser(authState.User.Identity.Name);
-        if (currentUser == null) { uriHelper.NavigateTo("/loginControl"); }
+        if (currentUser == null && authState.User.Identity.Name != null) { await authServ.Logout(); uriHelper.NavigateTo("/loginControl"); return; }
+        if (currentUser == null) {uriHelper.NavigateTo("/loginControl"); }
 
     }
 }
