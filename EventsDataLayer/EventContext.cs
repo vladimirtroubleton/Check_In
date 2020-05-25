@@ -9,7 +9,7 @@ namespace EventsDataLayer
     public class EventContext : DbContext
     {
         public DbSet<EventModel> Events { get; set; }
-        public DbSet<EventConnector> EventsConnect { get; set; }
+        public DbSet<EventConnectModel> EventsConnect { get; set; }
 
         public EventContext(DbContextOptions<EventContext> dbContextOptions):base(dbContextOptions)
         {

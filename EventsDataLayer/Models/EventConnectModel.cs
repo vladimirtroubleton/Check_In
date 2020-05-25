@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EventsDataLayer.Models
 {
-    public class EventConnector
+    public class EventConnectModel
     {
         [Key]
         public int ConnectId { get; set; }
