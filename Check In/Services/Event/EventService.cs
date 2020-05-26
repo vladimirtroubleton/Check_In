@@ -25,5 +25,20 @@ namespace Check_In.Services.Event
         {
             return await eventRepository.GetEventsByGroupId(GroupId);
         }
+
+        public async Task<EventConnectModel[]> GetEventsConnect(string login)
+        {
+            return await eventRepository.GetEventConnectByUserLoginId(login);
+        }
+
+        public async Task CreateEventConnect(int eventId , Guid groupId , string userLogin)
+        {
+            await eventRepository.AddEventConnect(new EventConnectModel
+            {
+                EventId = eventId,
+                GroupId = groupId,
+                UserLogin = userLogin
+            });
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿@page "/events/{Id:int}"
+﻿@page "/events"
 @using AuthDataLayer.Models
 @using EventsDataLayer.Models
 @inject Check_In.Services.IAuthService authServ
@@ -9,23 +9,50 @@
 @inject Check_In.Services.Event.EventService eventServ
 
     <div class="container">
-        @foreach (var even in eventsForUser) 
-        { 
-            <hr>
-            <div class="row text-center">
-                <div class="col-12 mx-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">Название события</div>
-                            <div class="card-title"><h4>@even.Title</h4></div>
-                            <div class="card-title">Описание</div>
-                            <div class="card-title">@even.Description</div>
-                            <div class="card-title">Вопросы:</div>
-                       
+        @if (eventsForUser != null)
+        {
+            <div class="row">
+                <div class="col-12 mx-auto text-center">
+                    <h4 >События группы @group.Name </h4>
+                </div>
+            </div>
+            @foreach (var even in eventsForUser)
+            {
+                <hr>
+                <div class="row text-center">
+                    <div class="col-12 mx-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">Название события</div>
+                                <div class="card-title"><h4>@even.Title</h4></div>
+                                <div class="card-title">Описание</div>
+                                <div class="card-title">@even.Description</div>
+                                @if (buttonsText[even.EventId] == "Отмечено")
+                                {
+                                    <button class="btn btn-outline-secondary"
+                                            @onclick="@(e => Checked(e, even.EventId))">
+                                        @buttonsText[even.EventId]
+                                    </button>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-outline-success"
+                                            @onclick="@(e => Checked(e, even.EventId))">
+                                        @buttonsText[even.EventId]
+                                    </button>
+                                }
 
-                            <a href="questionResponseAdd/@even.EventId" class="btn btn-outline-success">Я иду!</a>
+                            </div>
                         </div>
                     </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-12 mx-auto text-center">
+                    <p class="display-4">Событий нет</p>
                 </div>
             </div>
         }
@@ -35,9 +62,12 @@
     [Parameter]
     public int Id { get; set; }
 
+    private Dictionary<int,string> buttonsText = new Dictionary<int, string>();
+
     private UserModel currentUser;
     private EventModel[] eventsForUser;
     private EventConnectModel[] eventConnectModels;
+    private GroupModel group;
     protected override async Task OnInitializedAsync()
     {
         var authState = await authProvider.GetAuthenticationStateAsync();
@@ -50,8 +80,34 @@
         }
 
         eventsForUser = await eventServ.GetEventsByGroupUser(currentUser.GroupId);
+        eventConnectModels = await eventServ.GetEventsConnect(currentUser.Login);
+
+        group = await groupServ.GetGroup(currentUser.GroupId);
+
+        foreach (var even in eventsForUser)
+        {
+            if (eventConnectModels.Select(x=> x.EventId).Contains(even.EventId))
+            {
+                buttonsText.Add(even.EventId, "Отмечено");
+            }
+            else
+            {
+                buttonsText.Add(even.EventId, "Отметится");
+            }
+        }
 
 
 
+    }
+
+    public async Task Checked(MouseEventArgs e,int id)
+    {
+        if (buttonsText[id] == "Отмечено")
+        {
+            return;
+        }
+
+        buttonsText[id] = "Отмечено";
+        await eventServ.CreateEventConnect(id, currentUser.GroupId , currentUser.Login );
     }
 }

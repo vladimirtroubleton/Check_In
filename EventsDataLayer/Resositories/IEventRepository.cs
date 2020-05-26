@@ -14,6 +14,5 @@ namespace EventsDataLayer.Resositories
         Task<EventConnectModel[]> GetEventConnectByGroupId(Guid id);
         Task<EventConnectModel[]> GetEventConnectByUserLoginId(string login);
         Task RemoveEvent(int id);
-        Task RemoveEventConnect(int id);
     }
 }

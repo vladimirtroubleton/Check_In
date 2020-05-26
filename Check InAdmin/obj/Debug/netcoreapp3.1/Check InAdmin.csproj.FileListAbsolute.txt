@@ -457,3 +457,9 @@ D:\Release\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\H
 D:\Release\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\EventsViewGetByGroup.cshtml.g.cs
 D:\Release\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\QuestionViewGetByGroup.cshtml.g.cs
 D:\Release\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\GetResponses.cshtml.g.cs
+D:\Projects\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\EventCreate.cshtml.g.cs
+D:\Projects\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\EventsViewGetByGroup.cshtml.g.cs
+D:\Projects\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\GetResponses.cshtml.g.cs
+D:\Projects\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\QuestionViewGetByGroup.cshtml.g.cs
+D:\Projects\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\GetUserProfile.cshtml.g.cs
+D:\Projects\OPROSNIK\Check_In\Check InAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Home\GetEventData.cshtml.g.cs

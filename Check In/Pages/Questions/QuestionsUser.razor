@@ -41,12 +41,6 @@
                                         <div class="card-title"><h4>@quest.QuestionName</h4></div>
                                         <div class="card-title">Группа</div>
                                         <div class="card-title">@quest.GroupName</div>
-                                        <div class="card-title">Вопросы:</div>
-                                        @foreach (var miniQ in quest.Questions)
-                                        {
-                                            <div class="card-text">@miniQ</div>
-                                        }
-
                                         <a href="questionResponseAdd/@quest.QuestionId" class="btn btn-outline-success">Заполнить</a>
                                     </div>
                                 </div>
@@ -64,11 +58,7 @@
                                         <div class="card-title"><h4>@quest.QuestionName</h4></div>
                                         <div class="card-title">Группа</div>
                                         <div class="card-title">@quest.GroupName</div>
-                                        <div class="card-title">Вопросы:</div>
-                                        @foreach (var miniQ in quest.Questions)
-                                        {
-                                            <div class="card-text">@miniQ</div>
-                                        }
+                                      
 
                                         <a href="checkResponse/@quest.QuestionId" class="btn btn-outline-success">Посмотреть мой ответ</a>
                                     </div>

@@ -55,9 +55,9 @@
                         <InputSelect @bind-Value="groupId" class="form-control">
                             @foreach (var item in groupView)
                                 {
-                                <option value="@item.Id.ToString()">@item.Name</option>
+                                    <option value="@item.Id.ToString()">@item.Name</option>
                                 }
-                            /**/
+                          
                         </InputSelect>
                     }
                     <ValidationMessage For="@(() => userModel.GroupId)" />

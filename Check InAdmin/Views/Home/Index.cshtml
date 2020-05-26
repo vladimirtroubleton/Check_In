@@ -19,14 +19,14 @@
             <div class="col-6 mx-auto text-center">
 
 
-                @foreach (var item in Model.Users)
+                @foreach (var item in Model.Users.Where( x=> x.Login!= "Admin"))
                 {
                     <div class="card">
                         <div class="card-body">
                             <div class="card-title">
                                 @item.Name @item.Surname
                             </div>
-                            <a href="#" class="btn btn-outline-info">Перейти</a>
+                            <a href="/Home/GetUserProfile?login=@item.Login" class="btn btn-outline-info">Перейти</a>
                         </div>
                     </div>
                 }

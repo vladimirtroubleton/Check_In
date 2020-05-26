@@ -68,7 +68,7 @@ namespace EventsDataLayer.Resositories
             await eventContext.SaveChangesAsync();
         }
 
-        public async Task RemoveEventConnect(int id)
+        private async Task RemoveEventConnect(int id)
         {
             var model = await GetEventConnectByEventId(id);
             lock (locker)

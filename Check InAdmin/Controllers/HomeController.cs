@@ -18,10 +18,10 @@ using EventsDataLayer.Models;
 
 namespace Check_InAdmin.Controllers
 {
-    [Authorize(Roles ="admin")]
+    [Authorize(Roles = "admin")]
     public class HomeController : Controller
     {
-       
+
         private IGroupsRepository groupsRepository;
         private IUsersRepository usersRepository;
         private IQuestinosRepository questinosRepository;
@@ -65,11 +65,16 @@ namespace Check_InAdmin.Controllers
         {
             var users = await usersRepository.GetUsersByGroupId(id);
             await questinosRepository.DeleteQuestionsDataByGropId(id);
+            var events = await eventRepository.GetEventsByGroupId(id);
+            foreach (var even in events)
+            {
+                await eventRepository.RemoveEvent(even.EventId);
+            }
             foreach (var user in users)
             {
-               await usersRepository.RemoveUser(user);
+                await usersRepository.RemoveUser(user);
             }
-            await groupsRepository.DeleteGroup(id); 
+            await groupsRepository.DeleteGroup(id);
             return RedirectToAction("Index");
         }
 
@@ -92,7 +97,7 @@ namespace Check_InAdmin.Controllers
         {
             var quest = questinosRepository.GetQuestionsById(id);
             var groupbyQuest = await groupsRepository.GetGroupById(quest.GroupId);
-            var questMini = questionBuilder.GenerateValidQuestion(quest , 
+            var questMini = questionBuilder.GenerateValidQuestion(quest,
                 new QuestionViewModel
                 {
                     QuestionName = quest.Name,
@@ -100,7 +105,7 @@ namespace Check_InAdmin.Controllers
                     GroupId = groupbyQuest.Id,
                     GroupName = groupbyQuest.Name
                 }
-                );;
+                ); ;
 
             return View(questMini);
 
@@ -120,7 +125,7 @@ namespace Check_InAdmin.Controllers
 
         }
 
-       
+
 
         [HttpGet]
         public async Task<IActionResult> EventCreate()
@@ -133,7 +138,7 @@ namespace Check_InAdmin.Controllers
         {
             eventModel.Active = true;
             await eventRepository.AddEvent(eventModel);
-            return RedirectToAction("EventsView");
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -150,19 +155,67 @@ namespace Check_InAdmin.Controllers
         [HttpGet]
         public async Task<IActionResult> QuestionViewGetByGroup(Guid id)
         {
-            ViewBag.GroupThis = await groupsRepository.GetGroupById(id) ;
+            ViewBag.GroupThis = await groupsRepository.GetGroupById(id);
             var questions = await questinosRepository.GetQuestionsByGroupId(id);
             return View(questions);
 
 
 
         }
-
+        [HttpGet]
         public async Task<IActionResult> GetResponses(int id)
         {
             var responses = await questinosRepository.GetResponseByQuestionId(id);
 
             return View(responses);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetUserProfile(string login)
+        {
+            var user = await usersRepository.GetUserByLogin(login);
+            ViewBag.Group = await groupsRepository.GetGroupById(user.GroupId);
+            return View(user);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetEventData(int evId)
+        {
+
+
+            var eventModel = await eventRepository.GetEventById(evId);
+            UserModel[] usersInGroup = await usersRepository.GetUsersByGroupId(eventModel.GroupId);
+            GroupModel groupModel = await groupsRepository.GetGroupById(eventModel.GroupId);
+            var eventConnect = await eventRepository.GetEventConnectByEventId(evId);
+            EventViewModel eventViewModel = new EventViewModel
+            {
+
+                UsersNoActivate = usersInGroup.Where(x => !eventConnect.Select(x => x.UserLogin).Contains(x.Login)).ToArray(),
+                Group = groupModel,
+                Event = eventModel,
+                CountActiveUsers = 0
+            };
+
+           
+            if (eventConnect != null)
+            {
+                var activeUser = usersInGroup.Where(x => eventConnect.Select(x => x.UserLogin).Contains(x.Login)).ToArray();
+                eventViewModel.UsersActivate = activeUser;
+                eventViewModel.CountActiveUsers = activeUser.Count();
+            }
+
+            return View(eventViewModel);
+        }
+
+        [HttpGet]
+
+        public async Task<IActionResult> DeleteEvent(int evId)
+        {
+            await eventRepository.RemoveEvent(evId);
+            return RedirectToAction("Index");
+        }
+
     }
+        
+    
 }

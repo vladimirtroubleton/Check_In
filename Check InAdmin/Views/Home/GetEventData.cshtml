@@ -1,0 +1,59 @@
+﻿@model Check_InAdmin.Models.EventViewModel
+
+@{
+    ViewData["Title"] = "GetEventData";
+}
+
+
+    <div class="row">
+        <div class="col-12 text-center mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        Название события  <h4>@Model.Event.Title</h4>
+                    </div>
+                    <div class="card-title">
+                        Описание события   <h4>@Model.Event.Description</h4>
+                    </div>
+                    <div class="card-title">
+                        Количество участвующих  <h4>@Model.CountActiveUsers</h4>
+                    </div>
+                    <a href="/Home/DeleteEvent?evId=@Model.Event.EventId" class="btn btn-outline-danger">Удалить событие</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 text-center">
+            <h4>Активные пользователи группы</h4>
+            <hr />
+            @foreach (var item in Model.UsersActivate)
+            {
+                <div class="col-6 mx-auto text-center">
+
+                    <p class="text-body"> Логин : @item.Login</p>
+
+                    <p class="tex"> Имя : @item.Name</p>
+
+                    <a href="/Home/GetUserProfile?login=@item.Login" class="btn btn-outline-info">Информация</a>
+                </div>
+                <hr />
+            }
+        </div>
+        <div class="col-6 text-center">
+            <h4>Не активные пользователи группы</h4>
+            <hr />
+            @foreach (var item in Model.UsersNoActivate)
+            {
+                <div class="col-6 mx-auto text-center">
+
+                    <p class="text-body"> Логин : @item.Login</p>
+
+                    <p class="tex"> Имя : @item.Name</p>
+
+                    <a href="/Home/GetUserProfile?login=@item.Login" class="btn btn-outline-info">Информация</a>
+                </div>
+                <hr />
+            }
+        </div>
+    </div>
